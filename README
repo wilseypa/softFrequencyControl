@@ -5,3 +5,14 @@ are on the critical path and decrease the frequencies of cores that are off the
 critical path.  This archive contains the software codes that we are using to
 explore our hypotheses in this area.  We welcome suggestions and comments at
 wilseypa@gmail.com.  Thank you.
+
+Software Dependencies:
+  - pthread
+  - GNU Scientific Library
+  - Boost program options
+
+If libraries are not installed in the default library paths, may be able 
+to specify their respective paths in LD_LIBRARY_PATH environment variable.
+For example, if GNU Scientific is install in /usr/local/lib, then
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib will add the
+library path for the current terminal session.
