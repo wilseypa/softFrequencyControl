@@ -39,6 +39,8 @@ OBJS = $(TIME_OBJ) \
 	$(PROCBIND_OBJ) \
 	$(CPUFUNC_OBJ)
 
+DIR = directory
+
 TEST1 = $(BIN)/Throttling1
 TEST2 = $(BIN)/Throttling2
 TEST3 = $(BIN)/Throttling3
@@ -49,7 +51,11 @@ TESTS = $(TEST1) \
 	$(TEST3) \
     $(THROT_CTRL)
 
-test: $(TESTS)
+test: $(DIR) $(TESTS)
+
+$(DIR) : 
+	@[ -d $(BIN) ] || mkdir -p $(BIN)
+	@[ -d $(OBJ) ] || mkdir $(OBJ)
 
 # Utility functions object Files
 
